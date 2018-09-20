@@ -50,7 +50,15 @@
 					<ul class="nav flex-column">
 						<div class="user-info">
 							<h5 class="m-0">Héctor Alejandro Pérez Martínez</h5>
-							<p>Coordinador del área de Concepción del Oro</p>
+							<hr>
+							<small class="text-muted d-block mb-2">CARGO</small>
+							<p>Coordinador de área de Concepción del Oro</p>
+							<hr>
+							<small class="text-muted d-block mb-2">COMPETENCIA</small>
+							<p>Municipal</p>
+							<hr>
+							<small class="text-muted d-block mb-2">REGIÓN</small>
+							<p>Concepción del Oro</p>
 							<hr>
 							<h5 class="m-0">09:03 AM</h5>
 							<p>16 de septiembre de 2018</p>
@@ -147,66 +155,268 @@
 										<div class="row">
 											<div class="col">
 												<form>
-													<div class="form-row">
-														<div class="form-group">
+													<div class="form-row d-flex justify-content-center">
+														<div class="form-group col-md-4 mb-0">
 															<div class="input-group mb-3">
 																<div class="input-group-prepend">
-																	<span class="input-group-text" id="basic-addon1" style="font-weight:600;">Folio</span>
+																	<span class="input-group-text" id="folio" style="font-weight:600;">Folio</span>
 																</div>
-																<input style="font-weight:600;" readonly type="text" class="form-control" placeholder="CDHEZ-G345345" aria-label="Username" aria-describedby="basic-addon1">
+																<input style="font-weight:600;" readonly type="text" class="form-control" value="CDHEZ-G345345"
+																 aria-label="folio" aria-describedby="folio">
 															</div>
 														</div>
 													</div>
-													<strong class="text-muted d-block mb-2">Datos del asesorado</strong>
-													<hr>
+													<!-- Datos del asesorado -->
+													<strong class="text-muted d-block mb-2">Datos de la persona que solicita la asesoría</strong>
+													<hr class="mt-2">
 													<div class="form-row">
 														<div class="form-group col-md-3">
-															<label for="feFirstName">Apellido paterno</label>
-															<input type="text" class="form-control" id="feFirstName" placeholder="First Name" value="Sierra"> </div>
+															<label for="apellidoPaterno">Apellido paterno</label>
+															<input type="text" class="form-control" id="apellidoPaterno" placeholder="Ej: Raudales">
+														</div>
 														<div class="form-group col-md-3">
-															<label for="feLastName">Apellido materno</label>
-															<input type="text" class="form-control" id="feLastName" placeholder="Last Name" value="Brooks"> </div>
-															<div class="form-group col-md-6">
-																<label for="feLastName">Nombre(s)</label>
-																<input type="text" class="form-control" id="feLastName" placeholder="Last Name" value="Brooks"> </div>
-													</div>
-													<div class="form-row">
-														<div class="form-group col-md-12">
-															<label for="feFirstName">Nombre</label>
-															<input type="text" class="form-control" id="feFirstName" placeholder="First Name" value="Sierra">
-														</div>
-													</div>
-													<div class="form-row">
-														<div class="form-group col-md-6">
-															<label for="feEmailAddress">Email</label>
-															<input type="email" class="form-control" id="feEmailAddress" placeholder="Email" value="sierra@example.com">
+															<label for="apellidoMaterno">Apellido materno</label>
+															<input type="text" class="form-control" id="apellidoMaterno" placeholder="Ej. Rosales">
 														</div>
 														<div class="form-group col-md-6">
-															<label for="fePassword">Password</label>
-															<input type="password" class="form-control" id="fePassword" placeholder="Password"> </div>
+															<label for="nombre">Nombre(s)</label>
+															<input type="text" class="form-control" id="nombre" placeholder="Ej. Gloria">
+														</div>
 													</div>
-													<div class="form-group">
-														<label for="feInputAddress">Address</label>
-														<input type="text" class="form-control" id="feInputAddress" placeholder="1234 Main St"> </div>
+													<!-- Domicilio -->
+													<hr class="mt-2">
 													<div class="form-row">
-														<div class="form-group col-md-6">
-															<label for="feInputCity">City</label>
-															<input type="text" class="form-control" id="feInputCity"> </div>
 														<div class="form-group col-md-4">
-															<label for="feInputState">State</label>
-															<select id="feInputState" class="form-control">
-																<option selected>Choose...</option>
-																<option>...</option>
-															</select>
+															<label for="calle">Calle</label>
+															<input type="text" class="form-control" id="calle" placeholder="Ej. Av. Jesús Reyes Heroles">
 														</div>
 														<div class="form-group col-md-2">
-															<label for="inputZip">Zip</label>
-															<input type="text" class="form-control" id="inputZip"> </div>
+															<label for="numeroCasa">Número</label>
+															<input type="text" class="form-control" id="numeroCasa" placeholder="Ej. 204 Interior 2">
+														</div>
+														<div class="form-group col-md-4">
+															<label for="colonia">Colonia</label>
+															<input type="text" class="form-control" id="colonia" placeholder="Ej. Javier Barros Sierra">
+														</div>
+														<div class="form-group col-md-2">
+															<label for="codigoPostal">C.P.</label>
+															<input type="text" class="form-control" id="codigoPostal" placeholder="Ej. 98090">
+														</div>
 													</div>
 													<div class="form-row">
+														<div class="form-group col-md-3">
+															<label for="pais">País</label>
+															<input type="text" readonly class="form-control" id="pais" placeholder="Ej. México" value="México">
+														</div>
+														<div class="form-group col-md-3">
+															<label for="estado">Estado</label>
+															<input type="text" readonly class="form-control" id="estado" placeholder="Ej. Zacatecas" value="Zacatecas">
+														</div>
+														<div class="form-group col-md-3">
+															<label for="municipio">Municipio</label>
+															<select id="municipio" class="form-control">
+																<option value="" disabled selected>Seleccione...</option>
+																<option value="Juan Aldama">Juan Aldama</option>
+																<option value="Zacatecas">Zacatecas</option>
+															</select>
+														</div>
+														<div class="form-group col-md-3">
+															<label for="localidad">Localidad</label>
+															<select id="localidad" class="form-control">
+																<option value="" disabled selected>Seleccione...</option>
+																<option value="Centro">Centro</option>
+																<option value="La Muralla">La Muralla</option>
+															</select>
+														</div>
+													</div>
+													<hr class="mt-2">
+													<!-- Datos complementarios -->
+													<div class="form-row">
+														<div class="form-group col-md-2">
+															<label for="edad">Edad</label>
+															<input type="text" class="form-control" id="edad" placeholder="Ej. 53">
+														</div>
+														<div class="form-group col-md-4">
+															<label for="escolaridad">Escolaridad</label>
+															<select id="escolaridad" class="form-control">
+																<option value="" disabled selected>Seleccione...</option>
+																<option value="bachillerato">Bachillerato</option>
+																<option value="carreraTecnica">Carrera técnica</option>
+															</select>
+														</div>
+														<div class="form-group col-md-6">
+															<label for="ocupacion">Ocupación</label>
+															<select id="ocupacion" class="form-control">
+																<option value="" disabled selected>Seleccione...</option>
+																<option value="desempleado">Desempleado(a)</option>
+																<option value="autoempleo">Autoempleo</option>
+															</select>
+														</div>
+													</div>
+													<div class="form-row">
+														<div class="form-group col-md-4">
+															<label for="estadoCivil">Estado civil</label>
+															<select id="estadoCivil" class="form-control">
+																<option value="" disabled selected>Seleccione...</option>
+																<option value="divorciado">Divorciado(a)</option>
+																<option value="casado">Casado(a)</option>
+															</select>
+														</div>
+														<div class="form-group col-md-4">
+															<label for="nacionalidad">Nacionalidad</label>
+															<select id="nacionalidad" class="form-control">
+																<!-- <option value="" disabled selected>Seleccione...</option> -->
+																<option value="mexicana">Mexicana</option>
+																<option value="extranjera">Extranjera</option>
+															</select>
+														</div>
+														<div class="form-group col-md-4">
+															<label for="grupoSocial">Grupo social</label>
+															<select id="grupoSocial" class="form-control">
+																<option value="" disabled selected>Seleccione...</option>
+																<option value="periodismo">Periodismo</option>
+																<option value="obrero">Obrero</option>
+															</select>
+														</div>
+													</div>
+													<div class="form-row">
+														<div class="form-group col-md-6">
+															<label for="grupoAtencion">Grupo de atención</label>
+															<select id="grupoAtencion" class="form-control">
+																<option value="" disabled selected>Seleccione...</option>
+																<option value="sistemaPenitenciario">Sistema penitenciario</option>
+																<option value="sectorEducativo">Sector educativo</option>
+															</select>
+														</div>
+														<div class="form-group col-md-6">
+															<label for="lugarOrigen">Lugar de origen</label>
+															<input type="text" class="form-control" id="lugarOrigen" placeholder="Ej. Fresnillo">
+														</div>
+													</div>
+													<div class="form-row">
+														<div class="form-group col-md-4">
+															<label class="d-block">Sexo</label>
+															<div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+																<label class="btn btn-white active">
+																	<input type="radio" name="options" id="femenino" autocomplete="off" checked> Femenino
+																</label>
+																<label class="btn btn-white">
+																	<input type="radio" name="options" id="masculino" autocomplete="off"> Masculino
+																</label>
+															</div>
+														</div>
+														<div class="form-group col-md-2">
+															<label class="d-block">Discapacidad</label>
+															<div class="btn-group btn-group-toggle mb-3" data-toggle="buttons">
+																<label class="btn btn-white active">
+																	<input type="radio" name="options" id="noDiscapacidad" autocomplete="off" checked> No
+																</label>
+																<label class="btn btn-white">
+																	<input type="radio" name="options" id="siDiscapacidad" autocomplete="off"> Sí
+																</label>
+															</div>
+														</div>
+														<div class="form-group col-md-6">
+															<label for="discapacidad">Tipo de discapacidad</label>
+															<select id="discapacidad" class="form-control">
+																<option value="" disabled selected>Seleccione...</option>
+																<option value="motriz">Motriz</option>
+																<option value="auditiva">Auditiva</option>
+															</select>
+														</div>
+													</div>
+													<div class="form-row">
+														<div class="form-group col-md-4">
+															<label for="grupoEtnico">Grupo étnico</label>
+															<input type="text" class="form-control" id="grupoEtnico" placeholder="Ej. Zapoteco">
+														</div>
+														<div class="form-group col-md-4">
+															<label for="identificacion">Identificación</label>
+															<input type="text" class="form-control" id="identificacion" placeholder="Ej. INE">
+														</div>
+														<div class="form-group col-md-4">
+															<label for="folioId">Folio ID</label>
+															<input type="text" class="form-control" id="folioId" placeholder="Ej. 23456799">
+														</div>
+													</div>
+													<div class="form-row">
+														<div class="form-group col-md-6">
+															<label for="email">Correo electrónico</label>
+															<input type="email" class="form-control" id="email" placeholder="Ej. gloria.raudales@hotmail.com">
+														</div>
+														<div class="form-group col-md-3">
+															<label for="telefono1">Teléfono 1</label>
+															<input type="text" class="form-control" id="telefono1" placeholder="Ej. 4921231234">
+														</div>
+														<div class="form-group col-md-3">
+															<label for="telefono2">Teléfono 2</label>
+															<input type="text" class="form-control" id="telefono2" placeholder="Ej. 4921231234">
+														</div>
+													</div>
+													<!-- Datos de la asesoría -->
+													<strong class="text-muted d-block mb-2 mt-4">Datos de la asesoría</strong>
+													<hr class="mt-2">
+													<div class="form-row">
+														<div class="form-group col-md-3">
+															<label for="recepcion">Recepción</label>
+															<select id="recepcion" class="form-control">
+																<option value="" disabled selected>Seleccione...</option>
+																<option value="directa">Directa o personal</option>
+																<option value="telefonica">Telefónica</option>
+															</select>
+														</div>
+														<div class="form-group col-md-3">
+															<label for="materia">Materia</label>
+															<select id="materia" class="form-control">
+																<option value="" disabled selected>Seleccione...</option>
+																<option value="familiar">Familiar</option>
+																<option value="administrativa">Administrativa</option>
+															</select>
+														</div>
+														<div class="form-group col-md-6">
+															<label for="asunto">Asunto</label>
+															<select id="asunto" class="form-control">
+																<option value="" disabled selected>Seleccione...</option>
+																<option value="divorcioVoluntario">Divorcio voluntario</option>
+																<option value="embargos">Embargos</option>
+															</select>
+														</div>
+													</div>
+													<div class="form-row">
+														<div class="form-group col-md-6">
+															<label for="ambito">Ámbito</label>
+															<select id="ambito" class="form-control">
+																<option value="" disabled selected>Seleccione...</option>
+																<option value="estatal">Estatal</option>
+																<option value="federal">Federal</option>
+																<option value="municipal">Municipal</option>
+															</select>
+														</div>
+													</div>
+													<div class="form-row">
+														<div class="form-group col-md-6">
+															<label for="autoridadSenalada">Autoridad señalada</label>
+															<textarea class="form-control" name="autoridadSenalada" rows="5" placeholder="Ej. Juez familiar"></textarea>
+														</div>
+														<div class="form-group col-md-6">
+															<label for="superiorJerarquico">Superior jerárquico de la autoridad señalada</label>
+															<textarea class="form-control" name="superiorJerarquico" rows="5" placeholder="Ej. Tribunal"></textarea>
+														</div>
+													</div>
+													<!-- Narrativa de los hechos -->
+													<strong class="text-muted d-block mb-2 mt-4">Narrativa de los hechos</strong>
+													<hr class="mt-2">
+													<div class="form-row">
 														<div class="form-group col-md-12">
-															<label for="feDescription">Description</label>
-															<textarea class="form-control" name="feDescription" rows="5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eaque, quidem, commodi soluta qui quae minima obcaecati quod dolorum sint alias, possimus illum assumenda eligendi cumque?</textarea>
+															<textarea class="form-control" name="narrativa" rows="5" placeholder="..."></textarea>
+														</div>
+													</div>
+													<!-- Asesoría -->
+													<strong class="text-muted d-block mb-2 mt-4">Asesoría</strong>
+													<hr class="mt-2">
+													<div class="form-row">
+														<div class="form-group col-md-12">
+															<textarea class="form-control" name="asesoria" rows="5" placeholder="..."></textarea>
 														</div>
 													</div>
 													<button type="submit" class="btn btn-accent">Guardar asesoría</button>
@@ -215,64 +425,6 @@
 										</div>
 									</li>
 								</ul>
-							</div>
-						</div>
-					</div>
-					<!-- Default Light Table -->
-					<div class="row">
-						<div class="col">
-							<div class="card card-small mb-4">
-								<div class="card-header border-bottom">
-									<h6 class="m-0">Asesorías registradas</h6>
-								</div>
-								<div class="card-body p-0 pb-3 text-center">
-									<table class="table mb-0">
-										<thead class="bg-light">
-											<tr>
-												<th scope="col" class="border-0">#</th>
-												<th scope="col" class="border-0">First Name</th>
-												<th scope="col" class="border-0">Last Name</th>
-												<th scope="col" class="border-0">Country</th>
-												<th scope="col" class="border-0">City</th>
-												<th scope="col" class="border-0">Phone</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>1</td>
-												<td>Ali</td>
-												<td>Kerry</td>
-												<td>Russian Federation</td>
-												<td>Gdańsk</td>
-												<td>107-0339</td>
-											</tr>
-											<tr>
-												<td>2</td>
-												<td>Clark</td>
-												<td>Angela</td>
-												<td>Estonia</td>
-												<td>Borghetto di Vara</td>
-												<td>1-660-850-1647</td>
-											</tr>
-											<tr>
-												<td>3</td>
-												<td>Jerry</td>
-												<td>Nathan</td>
-												<td>Cyprus</td>
-												<td>Braunau am Inn</td>
-												<td>214-4225</td>
-											</tr>
-											<tr>
-												<td>4</td>
-												<td>Colt</td>
-												<td>Angela</td>
-												<td>Liberia</td>
-												<td>Bad Hersfeld</td>
-												<td>1-848-473-7416</td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
 							</div>
 						</div>
 					</div>
