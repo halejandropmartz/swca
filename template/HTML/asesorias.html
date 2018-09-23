@@ -37,7 +37,7 @@
 							<div class="d-table m-auto">
 								<!-- <img id="main-logo" class="d-inline-block align-top mr-1" style="max-width: 25px;" src="images/swca-logo.png"
 								 alt="Shards Dashboard"> -->
-								<span class="d-none d-md-inline ml-1"><b>SW</b> Asesorías</span>
+								<span class="d-none d-md-inline"><b>SW</b> Asesorías</span>
 							</div>
 						</a>
 						<a class="toggle-sidebar d-sm-inline d-md-none d-lg-none">
@@ -77,19 +77,19 @@
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="canalizaciones.html">
-								<i class="material-icons">subdirectory_arrow_right</i>
+								<i class="material-icons">directions</i>
 								<span>Canalizaciones</span>
 							</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="gestiones.html">
-								<i class="material-icons">receipt</i>
+								<i class="material-icons">assignment</i>
 								<span>Gestiones</span>
 							</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="consultas.html">
-								<i class="material-icons">table_chart</i>
+								<i class="material-icons">multiline_chart</i>
 								<span>Consultas</span>
 							</a>
 						</li>
@@ -107,6 +107,11 @@
 				<!-- Navbar principal -->
 				<div class="main-navbar sticky-top bg-white">
 					<nav class="navbar align-items-stretch navbar-light flex-md-nowrap p-0">
+						<div class="d-flex align-items-center">
+							<h5 class="d-none d-md-block ml-4 mb-0 text-truncate">
+								Departamento de quejas y orientación
+							</h5>
+						</div>
 						<ul class="navbar-nav border-left flex-row ml-auto">
 							<li class="nav-item dropdown d-flex align-items-center">
 								<!-- Botón del dropdown del usuario -->
@@ -132,32 +137,39 @@
 						</nav>
 					</nav>
 				</div>
+				<!-- Breadcrumb -->
+				<nav class="breadcrumb mb-0" aria-label="breadcrumb">
+					<ol class="breadcrumb mb-0">
+						<li class="breadcrumb-item"><a href="#">Asesorías</a></li>
+						<li class="breadcrumb-item active" aria-current="page">Captura de asesoría</li>
+					</ol>
+				</nav>
 				<!-- Contenido -->
 				<div class="main-content-container container-fluid px-4">
 					<!-- Encabezado de página -->
 					<div class="page-header row no-gutters py-4">
-						<div class="col-12 col-sm-4 text-center text-sm-left mb-0">
-							<span class="text-uppercase page-subtitle">Gestión de</span>
-							<h3 class="page-title">Asesorías</h3>
+						<div class="col-12 col-sm-6 text-center text-sm-left mb-0">
+							<span class="text-uppercase page-subtitle">Asesorías</span>
+							<h3 class="page-title">Captura de asesoría</h3>
 						</div>
 					</div>
 					<!-- Bloque -->
 					<div class="row">
 						<div class="col-12">
 							<div class="card card-small mb-4">
-								<div class="card-header border-bottom">
+								<!-- <div class="card-header border-bottom">
 									<div class="d-flex align-items-center justify-content-between">
 										<h6 class="m-0">Capturar asesoría</h6>
 									</div>
-								</div>
+								</div> -->
 								<ul class="list-group list-group-flush">
 									<li class="list-group-item p-3">
 										<div class="row">
 											<div class="col">
 												<form>
-													<div class="form-row d-flex justify-content-center">
+													<div class="form-row d-flex justify-content-center my-2">
 														<div class="form-group col-md-4 mb-0">
-															<div class="input-group mb-3">
+															<div class="input-group">
 																<div class="input-group-prepend">
 																	<span class="input-group-text" id="folio" style="font-weight:600;">Folio</span>
 																</div>
@@ -167,9 +179,8 @@
 														</div>
 													</div>
 													<!-- Datos del asesorado -->
-													<strong class="text-muted d-block mb-2">Datos de la persona que solicita la asesoría</strong>
-													<hr class="mt-2">
-													<div class="form-row">
+													<strong class="text-muted d-block my-4">Datos del asesorado</strong>
+													<div class="form-row col-lg-6 px-0">
 														<div class="form-group col-md-3">
 															<label for="apellidoPaterno">Apellido paterno</label>
 															<input type="text" class="form-control" id="apellidoPaterno" placeholder="Ej: Raudales">
@@ -184,53 +195,55 @@
 														</div>
 													</div>
 													<!-- Domicilio -->
-													<hr class="mt-2">
+													<strong class="text-muted d-block my-4">Domicilio</strong>
 													<div class="form-row">
-														<div class="form-group col-md-4">
-															<label for="calle">Calle</label>
-															<input type="text" class="form-control" id="calle" placeholder="Ej. Av. Jesús Reyes Heroles">
+														<div class="col-md-6">
+															<div class="form-group col-lg-12 px-0">
+																<label for="calle">Calle</label>
+																<input type="text" class="form-control" id="calle" placeholder="Ej. Av. Jesús Reyes Heroles">
+															</div>
+															<div class="form-group col-lg-12 px-0">
+																<label for="numeroCasa">Número</label>
+																<input type="text" class="form-control" id="numeroCasa" placeholder="Ej. 204 Interior 2">
+															</div>
+															<div class="form-group col-lg-12 px-0">
+																<label for="colonia">Colonia</label>
+																<input type="text" class="form-control" id="colonia" placeholder="Ej. Javier Barros Sierra">
+															</div>
+															<div class="form-group col-lg-12 px-0">
+																<label for="codigoPostal">Código postal</label>
+																<input type="text" class="form-control" id="codigoPostal" placeholder="Ej. 98090">
+															</div>
 														</div>
-														<div class="form-group col-md-2">
-															<label for="numeroCasa">Número</label>
-															<input type="text" class="form-control" id="numeroCasa" placeholder="Ej. 204 Interior 2">
-														</div>
-														<div class="form-group col-md-4">
-															<label for="colonia">Colonia</label>
-															<input type="text" class="form-control" id="colonia" placeholder="Ej. Javier Barros Sierra">
-														</div>
-														<div class="form-group col-md-2">
-															<label for="codigoPostal">C.P.</label>
-															<input type="text" class="form-control" id="codigoPostal" placeholder="Ej. 98090">
+														<div class="col-md-6">
+															<div class="form-group col-lg-12 px-0">
+																<label for="pais">País</label>
+																<input type="text" readonly class="form-control" id="pais" placeholder="Ej. México" value="México">
+															</div>
+															<div class="form-group col-lg-12 px-0">
+																<label for="estado">Estado</label>
+																<input type="text" readonly class="form-control" id="estado" placeholder="Ej. Zacatecas" value="Zacatecas">
+															</div>
+															<div class="form-group col-lg-12 px-0">
+																<label for="municipio">Municipio</label>
+																<select id="municipio" class="form-control">
+																	<option value="" disabled selected>Seleccione...</option>
+																	<option value="Juan Aldama">Juan Aldama</option>
+																	<option value="Zacatecas">Zacatecas</option>
+																</select>
+															</div>
+															<div class="form-group col-lg-12 px-0">
+																<label for="localidad">Localidad</label>
+																<select id="localidad" class="form-control">
+																	<option value="" disabled selected>Seleccione...</option>
+																	<option value="Centro">Centro</option>
+																	<option value="La Muralla">La Muralla</option>
+																</select>
+															</div>
 														</div>
 													</div>
-													<div class="form-row">
-														<div class="form-group col-md-3">
-															<label for="pais">País</label>
-															<input type="text" readonly class="form-control" id="pais" placeholder="Ej. México" value="México">
-														</div>
-														<div class="form-group col-md-3">
-															<label for="estado">Estado</label>
-															<input type="text" readonly class="form-control" id="estado" placeholder="Ej. Zacatecas" value="Zacatecas">
-														</div>
-														<div class="form-group col-md-3">
-															<label for="municipio">Municipio</label>
-															<select id="municipio" class="form-control">
-																<option value="" disabled selected>Seleccione...</option>
-																<option value="Juan Aldama">Juan Aldama</option>
-																<option value="Zacatecas">Zacatecas</option>
-															</select>
-														</div>
-														<div class="form-group col-md-3">
-															<label for="localidad">Localidad</label>
-															<select id="localidad" class="form-control">
-																<option value="" disabled selected>Seleccione...</option>
-																<option value="Centro">Centro</option>
-																<option value="La Muralla">La Muralla</option>
-															</select>
-														</div>
-													</div>
-													<hr class="mt-2">
 													<!-- Datos complementarios -->
+													<strong class="text-muted d-block my-4">Datos complementarios</strong>
 													<div class="form-row">
 														<div class="form-group col-md-2">
 															<label for="edad">Edad</label>
@@ -354,8 +367,7 @@
 														</div>
 													</div>
 													<!-- Datos de la asesoría -->
-													<strong class="text-muted d-block mb-2 mt-4">Datos de la asesoría</strong>
-													<hr class="mt-2">
+													<strong class="text-muted d-block my-4">Datos de la asesoría</strong>
 													<div class="form-row">
 														<div class="form-group col-md-3">
 															<label for="recepcion">Recepción</label>
@@ -404,16 +416,14 @@
 														</div>
 													</div>
 													<!-- Narrativa de los hechos -->
-													<strong class="text-muted d-block mb-2 mt-4">Narrativa de los hechos</strong>
-													<hr class="mt-2">
+													<strong class="text-muted d-block my-4">Narrativa de los hechos</strong>
 													<div class="form-row">
 														<div class="form-group col-md-12">
 															<textarea class="form-control" name="narrativa" rows="5" placeholder="..."></textarea>
 														</div>
 													</div>
 													<!-- Asesoría -->
-													<strong class="text-muted d-block mb-2 mt-4">Asesoría</strong>
-													<hr class="mt-2">
+													<strong class="text-muted d-block my-4">Asesoría</strong>
 													<div class="form-row">
 														<div class="form-group col-md-12">
 															<textarea class="form-control" name="asesoria" rows="5" placeholder="..."></textarea>
