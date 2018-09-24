@@ -22,6 +22,7 @@
     <!-- Estilos personalizados -->
     <link rel="stylesheet" id="main-stylesheet" data-version="1.1.0" href="styles/shards-dashboards.1.1.0.css">
     <link rel="stylesheet" href="styles/extras.1.1.0.min.css">
+    <link rel="stylesheet" href="styles/estilos.css">
     <script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 
@@ -205,7 +206,44 @@
                                                     <label for="region">Región</label>
                                                     <input type="text" class="form-control" id="region" placeholder="Ej. Guadalupe">
                                                 </div>
+                                                <div class="form-group col-lg-12 px-0">
+                                                    <label for="municipio">Rol</label>
+                                                    <select id="municipio" class="form-control">
+                                                        <option value="" disabled selected>Seleccione...</option>
+                                                        <option value="Administrador">Administrador</option>
+                                                        <option value="Coordinador de área">Coordinador de área</option>
+                                                        <option value="Capturista de datos">Capturista de datos</option>
+                                                        <option value="Analista de estadística">Analista de estadística</option>
+                                                    </select>
+                                                </div>
                                             </div>
+                                        </div>
+                                        <button class="btn btn-white btn-sm" type="button" data-toggle="collapse" data-target="#collapseHelp" aria-expanded="false"
+                                            aria-controls="collapseHelp">
+                                            Acerca de los roles
+                                        </button>
+                                        <div class="help-block collapse mt-2" id="collapseHelp">
+                                            <strong class="text-muted d-block mb-4">Permisos</strong>
+                                                <p>Administrador</p>
+                                                <ul>
+                                                    <li>Acceso a todos los módulos y funciones del sistema</li>
+                                                </ul>
+                                            <p>Coordinador de área</p>
+                                            <small>Según el área que desempeñe</small>
+                                            <ul>
+                                                <li>Capturar datos</li>
+                                                <li>Modificar datos</li>
+                                                <li>Consultar datos</li>
+                                            </ul>
+                                            <p>Capturista de datos</p>
+                                            <ul>
+                                                <li>Capturar datos</li>
+                                            </ul>
+                                            <p>Analista de estadísticas</p>
+                                            <ul>
+                                                <li>Consultar datos</li>
+                                                <li>Descargar los datos</li>
+                                            </ul>
                                         </div>
                                         <strong class="text-muted d-block my-4">Contraseña del usuario</strong>
                                         <div class="form-row">

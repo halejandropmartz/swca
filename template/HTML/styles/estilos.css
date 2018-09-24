@@ -1,0 +1,11 @@
+.help-block {
+    padding: 15px;
+    border: 1px solid gainsboro;
+    border-radius: 5px;
+    color: #868e96;
+    font-weight: 400;
+}
+.help-block p {
+    margin: 1px 0;
+    font-weight: 500;
+}
